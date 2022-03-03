@@ -8,7 +8,7 @@ path.touch()
 
 def filename():
     os.chdir(r'D:\Test')
-    for file in glob.glob("*.jpeg"):
+    for file in glob.glob("*.zip"):
         if os.path.exists(file):
             return file
 
