@@ -1,16 +1,21 @@
+import json
 import os
 import glob
 
 from artifactory import ArtifactoryPath
-path = ArtifactoryPath('http://127.0.0.1:8082/artifactory/sharedlib_Artifacts/',
-    auth=('admin', 'Kumar@6805'))
-path.touch()
 
-def filename():
-    os.chdir(r'D:\Test')
-    for file in glob.glob("*.zip"):
-        if os.path.exists(file):
-            return file
+with open(r'artifactory_jf.json','r') as filesdata:
+    filedata=json.load(filesdata)
+    for file_ele in filedata['data1']:
+        def filename():
+            os.chdir(file_ele["file_path"])
+            for file in glob.glob("*.zip"):
+                if os.path.exists(file):
+                    return file
+        path1 = ArtifactoryPath(file_ele["repo_link"],
+            auth=(file_ele["username"],file_ele["password"]))
+        path1.touch()
 
 
-path.deploy_file(filename())
+
+        path1.deploy_file(filename())
