@@ -2,7 +2,7 @@ import os
 import glob
 
 from artifactory import ArtifactoryPath
-path = ArtifactoryPath('http://127.0.0.1:8082/artifactory/sharedlib-Artifacts/',
+path = ArtifactoryPath('http://127.0.0.1:8082/artifactory/sharedlib_Artifacts/',
     auth=('admin', 'Kumar@6805'))
 path.touch()
 
