@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Upload'){
             steps {
-                bat 'zipartjf.py'
+                bat 'sharelibjf-zip'
                 script{
                     test.div(30,25)
                 }
