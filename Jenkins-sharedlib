@@ -6,7 +6,7 @@ pipeline {
         stage ('Python') {
             steps {
                 bat 'PythonwithJson.py'
-                scripts{
+                script{
                     test.add(20,10)
                     test.mul(20,10)
                 }
@@ -15,7 +15,7 @@ pipeline {
         stage ('Upload'){
             steps {
                 bat 'zipartjf.py'
-                scripts{
+                script{
                     test.div(30,25)
                 }
             }
