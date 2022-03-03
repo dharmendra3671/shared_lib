@@ -1,4 +1,4 @@
-@Library("pythonhome_demo")-
+@Library("pythonhome-demo") _
     
 pipeline {
     agent any
