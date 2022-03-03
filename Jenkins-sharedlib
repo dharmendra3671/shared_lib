@@ -5,7 +5,7 @@ pipeline {
         stages {
         stage ('Python') {
             steps {
-                bat 'PythonwithJson.py'
+                bat 'Pythonlib.py'
                 script{
                     test.add(20,10)
                     test.mul(20,10)
