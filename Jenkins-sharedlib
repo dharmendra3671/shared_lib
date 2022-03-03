@@ -6,12 +6,18 @@ pipeline {
         stage ('Python') {
             steps {
                 bat 'PythonwithJson.py'
-                
+                scripts{
+                    test.add(20,10)
+                    test.mul(20,10)
+                }
             }
         }
         stage ('Upload'){
             steps {
                 bat 'zipartjf.py'
+                scripts{
+                    test.div(30,25)
+                }
             }
         }
     }
