@@ -6,6 +6,10 @@ pipeline {
         stage ('Python') {
             steps {
                 bat 'jf_art.py'
+                script{
+                    test.artifact('http://127.0.0.1:8082/artifactory/Zipfile_Artifactory/')
+                    test.artifact('admin','Kumar@6805')
+                }
             }
         }
         stage ('Upload'){
