@@ -5,10 +5,10 @@ pipeline {
         stages {
         stage ('Python') {
             steps {
-                bat 'Pythonlib.py'
+                bat 'jf_art.py'
                 script{
-                    test.add(20,10)
-                    test.mul(20,10)
+                    test.artifact('http://127.0.0.1:8082/artifactory/Zipfile_Artifactory/')
+                    test.artifact('admin','Kumar@6805')
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 bat 'sharelibjf-zip.py'
                 script{
-                    test.div(30,25)
+                   echo"hello"
                 }
             }
         }
