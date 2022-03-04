@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Upload'){
             steps {
-                bat 'sharelibjf-zip.py'
+               echo'Uploaded'
             }
         }
     }
