@@ -1,3 +1,3 @@
 def uploadfile(){
-  bat "jf_art.py"
+  bat "sharelibjf-zip.py"
 }
