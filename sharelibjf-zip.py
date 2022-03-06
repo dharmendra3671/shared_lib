@@ -4,7 +4,7 @@ import glob
 
 from artifactory import ArtifactoryPath
 
-with open(r'artifactory_jf.json','r') as filesdata:
+with open(r'artifact_jf.json','r') as filesdata:
     filedata=json.load(filesdata)
     for file_ele in filedata['data1']:
         def filename():
