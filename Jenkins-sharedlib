@@ -7,8 +7,7 @@ pipeline {
             steps {
                 bat 'jf_art.py'
                 script{
-                    test.add(20,10)
-                    test.mul(20,10)
+                    test.uloadfile()
                 }
             }
         }
@@ -16,7 +15,7 @@ pipeline {
             steps {
                 bat'sharelibjf-zip.py'
                 script{
-                       test.div(20,10)
+                       test.uploadfile()
                 }
             }
         }
