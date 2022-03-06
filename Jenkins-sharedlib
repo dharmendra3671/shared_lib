@@ -5,7 +5,7 @@ pipeline {
         stages {
         stage ('Python') {
             steps {
-                bat 'jf_art.py'
+                echo'uploading'
                 script{
                     test.uploadfile()
                 }
@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('Upload'){
             steps {
-                bat'sharelibjf-zip.py'
+                echo'uploading'
                 script{
                        test.uploadfile()
                 }
