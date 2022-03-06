@@ -7,7 +7,7 @@ pipeline {
             steps {
                 bat 'jf_art.py'
                 script{
-                    test.uloadfile()
+                    test.uploadfile()
                 }
             }
         }
