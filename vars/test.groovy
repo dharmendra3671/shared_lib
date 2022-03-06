@@ -1,3 +1,3 @@
 def uloadfile(){
-  bat "jf_art"
+  bat "jf_art.py"
 }
