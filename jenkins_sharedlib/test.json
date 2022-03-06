@@ -1,1 +1,24 @@
+@Library("pythonhome-demo") _
+    
+pipeline {
+    agent any
+        stages {
+        stage ('Python') {
+            steps {
+                bat 'Pythonlib.py'
+                script{
+                    test.uploadfile()
+                }
+            }
+        }
+        stage ('Upload'){
+            steps {
+                echo'uploading'
+                script{
+                       test.uploadfile()
+                }
+            }
+        }
+    }
+}  
 
