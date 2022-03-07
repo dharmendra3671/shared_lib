@@ -11,18 +11,6 @@
             "username":"admin",
             "password": "Kumar@6805",
             "file_path": "D:\\Test2"
-        },
-         {
-            "repo_link": "http://127.0.0.1:8082/artifactory/upload_artifact1/",
-            "username":"admin",
-            "password": "Kumar@6805",
-            "file_path": "D:\\Test"
-        },
-         {
-            "repo_link": "http://127.0.0.1:8082/artifactory/upload_artf_2/",
-            "username":"admin",
-            "password": "Kumar@6805",
-            "file_path": "D:\\Test2"
         }
     ]
 }    
