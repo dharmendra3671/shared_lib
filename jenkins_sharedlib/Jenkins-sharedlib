@@ -8,6 +8,7 @@ pipeline {
                 echo'building'
                 script{
                     test.uploadfile()
+                    test.uploadfile()
                 }
             }
         }
