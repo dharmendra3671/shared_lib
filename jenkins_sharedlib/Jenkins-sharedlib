@@ -5,7 +5,7 @@ pipeline {
         stages {
         stage ('Python') {
             steps {
-                bat 'Pythonlib.py'
+                echo'building'
                 script{
                     test.uploadfile()
                 }
