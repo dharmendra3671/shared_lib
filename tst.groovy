@@ -1,4 +1,6 @@
-def uploadfile(){
+def buildfile(){
   bat'Pythonlib.py'
-  bat "sharelibjf-zip.py"
+}
+def uploadfile(){
+   bat "sharelibjf-zip.py"
 }
