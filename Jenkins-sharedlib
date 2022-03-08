@@ -7,8 +7,8 @@ pipeline {
             steps {
                 echo'building'
                 script{
-                    tst.buildfile()
-                    tst.buildfile()
+                    test.buildfile()
+                    test.buildfile()
                 }
             }
         }
