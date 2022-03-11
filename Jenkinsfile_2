@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Wait for user to input text?') {
+            steps {
+                script {
+                     bat 'posnegint.py'
+                     def USER_INPUT = input(
+                        message: 'Enter number to find list of positive and negative number.',
+                        parameters: [
+                                [$class: 'ChoiceParameterDefinition',
+                                 name: 'input',
+                                 description: 'taking user inputs']
+                        ])
+                     echo "The answer is: ${USER_INPUT}"
+                    }
+                }
+            }        
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+}
+© 2022 GitHub, Inc.
